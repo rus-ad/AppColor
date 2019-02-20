@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Black and white</title>
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/button_img.css' %}">
+</head>
+<body>
+
+<form id="upload" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <div id="drop">
+                {{form.as_table}}
+                <a id="button_load">Browse</a>
+            <a id="button_submit" onclick="func();"> Submit </a>
+        </div>
+</form>
+
+
+<!-- JavaScript Includes  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{% static 'js/jquery.knob.js' %}"></script>
+<!-- jQuery File Upload Dependencies -->
+<script src="{% static 'js/jquery.ui.widget.js' %}"></script>
+<script src="{% static 'js/jquery.iframe-transport.js' %}"></script>
+<script src="{% static 'js/jquery.fileupload.js' %}"></script>
+<!-- main JS file -->
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

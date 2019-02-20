@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Black and white</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/button_img.css' %}">
+</head>
+
+<body>
+<form id="upload" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <div id="drop">
+                <p>{{ text }}</p>
+        </div>
+</form>
+</body>
+
+
+</html>
